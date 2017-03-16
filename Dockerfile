@@ -23,7 +23,9 @@ RUN apt-get install -y php5 php5-mysql php5-dev php5-gd php5-memcache php5-pspel
 
 # install composer
 
-RUN apt-get install -y composer
+RUN curl -sS https://getcomposer.org/installer | php
+RUN sudo mv composer.phar /usr/local/bin/composer.phar
+RUN alias composer='/usr/local/bin/composer.phar'
 
 # others
 
