@@ -26,6 +26,10 @@ RUN apt-get install -y php5 php5-mysql php5-dev php5-gd php5-memcache php5-pspel
 RUN apt-get install -y supervisor
 RUN mkdir -p /var/log/supervisor
 
+# install composer
+
+RUN apt-get install composer
+
 # install sshd
 RUN apt-get install -y openssh-server openssh-client passwd
 RUN mkdir -p /var/run/sshd
